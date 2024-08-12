@@ -1,0 +1,156 @@
+﻿@model CreateLoginDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MultiShop Login Sayfası</title>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Font-->
+    <link rel="stylesheet" type="text/css" href="~/colorlib-regform-30/css/opensans-font.css">
+    <link rel="stylesheet" type="text/css" href="~/colorlib-regform-30/fonts/line-awesome/css/line-awesome.min.css">
+    <!-- Jquery -->
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+    <!-- Main Style Css -->
+    <link rel="stylesheet" href="~/colorlib-regform-30/css/style.css" />
+</head>
+<body class="form-v4">
+    <div class="page-content">
+        <div class="form-v4-content">
+            <div class="form-left">
+                <h2>MultiShop E-Ticaret</h2>
+                <p class="text-1">MultiShop projemiz üzerinden e-ticaret işlemlerini gerçekleştirebilmek, indirimli ürünler ve fırsatlardan haberdar olmak adına hemen oturum açma işlemini gerçekleştirin.</p>
+                <p class="text-2">Alışverişinizi gerçekleştirebilmek, sepetinize ürün eklemek ve ürün listesini görebilmek için oturum açmanız gerekmektedir. Bir hesabınız yoksa aşağıda kayıt olabilirsiniz.</p>
+                <div class="form-left-last">
+                    <a href="/Register/Index/" style="height:35px" class="account">Kayıt Ol</a>
+                </div>
+            </div>
+            <form class="form-detail" method="post">
+                <h2>MultiShop Giriş Formu</h2>
+                <div class="form-row">
+                    <label for="your_username">Kullanıcı Adınız</label>
+                    <input type="text" id="your_username" asp-for="Username" class="input-text" required>
+                </div>
+                <div class="form-row">
+                    <label for="your_password">Şifreniz</label>
+                    <input type="password" id="your_password" asp-for="Password" class="input-text" required>
+                </div>
+
+                <div class="form-row-last">
+                    <button class="register" style="height:35px">Giriş Yap</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+</body>
+</html>
+@* @model CreateLoginDto
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Multi Shop Giriş Sayfası</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+          content="freelancer Sign Up Form Responsive web template, Bootstrap Web Templates,
+              Flat Web Templates, Android Compatible web template, Smartphone Compatible web template,
+                   free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //Meta tag Keywords -->
+    <link href="~/Freelancer-Signup-Free/fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="~/Freelancer-Signup-Free/css/style.css" type="text/css" media="all" />
+    <!--//Style-CSS -->
+
+    <link rel="stylesheet" href="~/Freelancer-Signup-Free/css/font-awesome.min.css" type="text/css" media="all">
+    <style>
+        .btn-register {
+            display: inline-block; /* Diğer içeriklerle aynı hizada olmasını sağlar */
+            padding: 10px 20px; /* Butonun içerik içi boşluğunu ayarlar */
+            font-size: 14px; /* Buton metin boyutunu ayarlar */
+            background-color: orangered; /* Buton arka plan rengini ayarlar */
+            color: #ffffff; /* Buton metin rengini ayarlar */
+            text-decoration: none; /* Link altı çizgisini kaldırır */
+            border-radius: 5px; /* Buton köşelerini yuvarlar */
+            transition: background-color 0.3s; /* Buton üzerine gelince geçiş efekti */
+            width: 400px; /* Buton genişliğini ayarlar */
+            height: 45px; /* Buton yüksekliğini ayarlar */
+            text-align: center; /* Buton metni ortalar */
+            line-height: 30px; /* Buton yüksekliğine göre metin hizalamasını ayarlar */
+        }
+
+            .btn-register:hover {
+                background-color: forestgreen; /* Buton üzerine gelince arka plan rengini değiştirir */
+            }
+    </style>
+</head>
+
+<body>
+    <div id="block" class="w3lvide-content with-background" data-vide-bg="false" data-vide-options="position: 0% 50%">
+
+        <!-- /form -->
+        <div class="workinghny-form-grid">
+            <div class="main-hotair">
+                <div class="content-wthree">
+
+                    <h1>Merhaba</h1>
+                    <p>
+                        Giriş yap veya hesap oluştur, indirimleri kaçırma!
+                    </p>
+                    <form method="post">
+                        <input type="text" class="text" asp-for="Username" placeholder="Kullanıcı Adı" required>
+                        <input type="password" class="password" asp-for="Password" placeholder="Şifre" required>
+                        <button class="btn" type="submit">Giriş Yap</button>
+                    </form>
+                    
+                    <p class="continue"><span>Sosyal Medya Hesaplarınıız İle Kayıt Olabilirsiniz</span></p>
+                    <div class="social-login">
+                    <a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                    <a href="#twiter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                    <a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                    <a href="#insta"><span class="fa fa-pinterest" aria-hidden="true"></span></a>
+                    </div>
+                    <br />
+                    <a href="~/Register/Index" class="btn btn-register">Kayıt Olmak için Tıklayın</a>
+                </div>
+
+            </div>
+           
+            <!-- copyright-->
+            <div class="copyright text-center">
+                <p class="copy-footer-29">
+                    © @DateTime.Now.Year M&Y Yazılım | Tüm Hakları Saklıdır <a href="">Tunç Çindaş</a>
+                </p>
+            </div>
+        </div>
+        <!-- //copyright-->
+    </div>
+    <!-- //form section start -->
+    <!-- js -->
+    <script src="~/Freelancer-Signup-Free/js/jquery.min.js"></script>
+    <!-- //js -->
+    <script src="~/Freelancer-Signup-Free/js/jquery.vide.js"></script>
+    <script>
+        // $(document).ready(function () {
+        //     $("#block").vide("video/ocean"); // Non declarative initialization
+
+        //     var instance = $("#block").data("vide"); // Get instance
+        //     var video = instance.getVideoObject(); // Get video object
+        //     instance.destroy(); // Destroy instance
+        // });
+    </script>
+</body>
+
+</html>
+ *@

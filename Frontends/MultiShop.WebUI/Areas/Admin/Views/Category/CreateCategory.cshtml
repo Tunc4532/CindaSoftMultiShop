@@ -1,0 +1,27 @@
+﻿@model CreateCategoryDto
+@{
+    ViewData["Title"] = "CreateCategory";
+    Layout = "~/Areas/Admin/Views/AdminLayout/IndexLayout.cshtml";
+}
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Kategori Ekleme Sayfası</h4>
+                <div class="bs-example" data-example-id="bordered-table">
+                    <form method="post" >
+                        <span class="list-group-item-dark" >Kategori Adı</span>
+                        <input type="text" class="form-control" asp-for="CategoryName" />
+                        <br />
+                        <span class="list-group-item-dark">Kategori Url</span>
+                        <input type="text" class="form-control" asp-for="ImageUrl" />
+                        <br />
+                        <button class="btn btn-outline-success">Kategoriyi Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

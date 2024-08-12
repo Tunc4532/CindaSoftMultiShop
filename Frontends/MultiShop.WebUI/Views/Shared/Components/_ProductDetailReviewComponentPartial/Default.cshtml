@@ -1,0 +1,26 @@
+﻿@model List<ResultCommentDto>
+<div class="tab-pane fade" id="tab-pane-3">
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="mb-4">(@Model.Count) Değerlendirme</h5>
+            @foreach (var item in Model)
+            {
+                <div class="media mb-4">
+                    <img src="~/online-shop-website-template/img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1 rounded-circle" style="width: 45px;">
+                    <div class="media-body">
+                        <h6 class="mt-0">@item.NameSurname <small>- <i>@item.CreatedDate.ToLongDateString()</i></small></h6>
+                        <div class="text-warning mb-2">
+                            @for (int i = 0; i < item.Rayting; i++)
+                            {
+                                <i class="fas fa-star"></i>
+                            }
+                        </div>
+                        <p>@item.CommentDetail</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @await Html.PartialAsync("~/Views/ProductList/AddComment.cshtml", new { id = ViewBag.ID })
+    </div>
+</div>

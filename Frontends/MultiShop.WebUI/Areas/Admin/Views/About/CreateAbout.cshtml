@@ -1,0 +1,33 @@
+﻿@model CreateAboutDto
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Areas/Admin/Views/AdminLayout/IndexLayout.cshtml";
+}
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Alt Bilgi Ekleme Sayfası</h4>
+                <div class="bs-example" data-example-id="bordered-table">
+                    <form method="post">
+                        <span class="list-group-item-dark">Adres</span>
+                        <input type="text" class="form-control" asp-for="Address" />
+                        <br />
+                        <span class="list-group-item-dark">Mail</span>
+                        <input type="text" class="form-control" asp-for="Email" />
+                        <br />
+                        <span class="list-group-item-dark">Telefon</span>
+                        <input type="text" class="form-control" asp-for="Phone" />
+                        <br />
+                        <span class="list-group-item-dark">Açıklama</span>
+                        <textarea class="form-control" asp-for="Description" rows="5"></textarea>
+                        <br />
+                        <button class="btn btn-outline-success">Alt Bilgi Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

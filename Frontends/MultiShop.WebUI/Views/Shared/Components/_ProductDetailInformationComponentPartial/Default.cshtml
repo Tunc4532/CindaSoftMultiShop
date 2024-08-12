@@ -1,0 +1,21 @@
+﻿@model UpdateProductDetailDto
+<div class="tab-pane fade" id="tab-pane-2">
+    <h4 class="mb-3">Ürün Bilgileri</h4>
+    @if (!string.IsNullOrEmpty(Model.ProductInfo))
+    {
+        var productInfoLines = Model.ProductInfo.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+        foreach (var line in productInfoLines)
+        {
+            <p>@line</p>
+        }
+    }
+    else
+    {
+        <p>Ürün bilgisi bulunamadı.</p>
+    }
+</div>
+
+@* <div class="tab-pane fade" id="tab-pane-2">
+    <h4 class="mb-3">Ürün Bilgileri</h4>
+    <p>@Model.ProductInfo</p>
+</div> *@

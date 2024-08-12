@@ -1,0 +1,43 @@
+﻿@model List<ResultFeatureSliderDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/IndexLayout.cshtml";
+    int count = 0;
+}
+
+<section class="content container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Öne Çıkan Slider İşlemleri</h4>
+                <div class="bs-example" data-example-id="bordered-table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Slider Başlığı</th>
+                                <th>Sil</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <th>@item.Tittle</th>
+                                    <td><a href="/Admin/FeatureSlider/RemoveFeatureSlider/@item.FeatureSliderId" class="btn btn-danger">Sil</a></td>
+                                    <td><a href="/Admin/FeatureSlider/UpdateFeatureSlider/@item.FeatureSliderId" class="btn btn-warning">Güncelle</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/Admin/FeatureSlider/CreateFeatureSlider/" class="btn btn-success">Yeni Slider Girişi</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
